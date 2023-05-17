@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sprint Modulo 3. Fundamentos de JavaScript</title>
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!--CSS-->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="mb-mx">
+    <h2 class="border border-dark border-3">
+        <img src="img/logo.jpeg" alt="Logo de la empresa" class="logo"> Área de Recursos Humanos Empresa "Pérez Cotapos"</h2><br>
+    <form id="form">
+        <div class="row justify-content-md-center">
+            <!--Nombre, apellido y fecha de nacimiento-->
+            <div class="col-md-4 justify-content-md-center border-dark border-3 ">
+                <label for="nombre" class="form-label">Nombre</label>          
+                <input type="text" class="form-control" name="nombre" id="nombre"/><br> 
+                <label for="apellido" class="form-label">Apellido</label>
+                <input type="text" class="form-control" name="apellido" id="apellido"/><br>   
+                <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+                <input type="date" class="form-control" name="fechaNacimiento" id="fechaNacimiento"/><br><br>
+        
+                <!--Es trabajador activo?-->
+                <label for="esTrajadorActivo" class="form-label">¿Es Trabajador Activo?</label>
+                <select name="esTrajadorActivo" id="esTrabajadorActivo"><br>
+                    <option value="-1" selected disabled>Seleccione</option>
+                    <option value="true">Sí</option><br>
+                    <option value="false">No</option><br>
+                </select><br><br>
+                <label for="fechaIngreso" class="form-label">Fecha de Ingreso</label>
+                <input type="date" class="form-control" name="fechaIngreso" id="fechaIngreso"/><br><br>
+
+                <!--Sueldos-->
+                <label for="sueldoActual" class="form-label">Sueldo Actual</label> 
+                <input type="number" class="form-control" name="sueldoActual" id="sueldoActual" min="1"/><br>
+                <label for="sueldoAnterior" class="form-label">Sueldo Semestre Anterior</label>
+                <input type="number" class="form-control" name="sueldoAnterior" id="sueldoAnterior" min="1"/><br><br>
+
+                <!--Tiene carga familiar?-->
+                <label for="tieneCargaFamiliar" class="form-label">¿Tiene Carga Familiar?</label>
+                <select name="tieneCargaFamiliar" id="tieneCargaFamiliar"><br>
+                    <option value="-1" selected disabled>Seleccione</option>
+                    <option value="true">Sí</option><br>
+                    <option value="false">No</option><br>
+                </select><br><br>
+                <label for="cantidadCargaFamiliar" class="form-label">Cantidad de Carga(s) Familiar(es)</label>
+                <input type="number" class="form-control" name="cantidadCargaFamiliar" id="cantidadCargaFamiliar" min="1"/><br><br>
+                <div class="d-flex justify-content-md-center mb-4">
+                    <button class="btn btn-light" id="button" type="submit" onclick="createUser()" disabled>Registrar Usuario</button>
+                    <p id="validacionForm"></p>
+                </div>
+            </div>
+        </div>
+    </form>
+    
+    <div class="d-flex justify-content-md-center">                                                        
+        <button class="btn btn-warning" id="buttonPerm" onclick="infPermanencia()" disabled>Informe Permanencia</button>
+        <button class="btn btn-warning " id="buttonAsig" onclick="infAsignaciones()" disabled>Informe Asignaciones</button>
+        <button class="btn btn-warning" id="buttonComp" onclick="infCompleto()" disabled>Informe Completo Usuario</button>
+    </div><br>
+    <div class="d-flex justify-content-md-center">
+        <p id="respInforme"></p>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+h2{
+    text-align: center;
+    background-color:slateblue;
+    margin-top: 20px;
+    margin-right: 20px;
+    font-weight: bold;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    padding: 20px;
+    color: white;
+}
+body{
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: #c4dfdf;
+
+}
+.form-label{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    background-color:mediumslateblue;
+    color:beige;
+    padding: 5px;
+    text-align: center;
+    
+}
+
+label{
+   outline: 2px solid black;  
+}
+
+button{
+   margin-right: 10px;
+}
+
+.logo{
+   object-fit: contain;
+   mix-blend-mode: color-burn;
+}
